@@ -10,13 +10,13 @@ export const configSchema = z.object({
    * @example "https://www.builder.io/c/docs/developers"
    * @default ""
    */
-  url: z.string(),
+  url: "https://docs.unrealengine.com/5.3/en-US/",
   /**
    * Pattern to match against for links on a page to subsequently crawl
    * @example "https://www.builder.io/c/docs/**"
    * @default ""
    */
-  match: z.string().or(z.array(z.string())),
+  match: "https://docs.unrealengine.com/5.3/en-US/**",
 
   /**
    * Selector to grab the inner text from
@@ -28,12 +28,12 @@ export const configSchema = z.object({
    * Don't crawl more than this many pages
    * @default 50
    */
-  maxPagesToCrawl: z.number().int().positive(),
+  maxPagesToCrawl: 999,
   /**
    * File name for the finished data
-   * @default "output.json"
+   * @default "UENIRVANA.json"
    */
-  outputFileName: z.string(),
+  outputFileName: "../data/UENIRVANA.json",
   /** Optional cookie to be set. E.g. for Cookie Consent */
   cookie: z.object({
     name: z.string(),
